@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    padding: 10px;
+}
+
+.main{
+    width: 400px;
+    height:650px ;
+    /* border: 2px solid rgb(234, 44, 85); */
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.stories{
+    width: 100%;
+    height: 130px;
+    border-bottom: 2px solid rgb(97, 92, 92);
+    border-top: 2px solid rgb(97, 92, 92);
+    white-space: nowrap;
+    padding: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.stories::-webkit-scrollbar{
+    display: none;
+}
+
+.story{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(235, 32, 140);
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.story img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content{
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+    /* background-color:green ; */
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+
+
+
+.img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img img{
+    width: 100%;
+    height: calc(100% - 100px);
+    object-fit: cover;
+    object-position: center;
+    /* border-radius: 20px; */
+}
+
+i{
+    font-size: 110px;
+    position: absolute;
+    color: white;
+    top: calc(50% - 100px );
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50% ) scale(0);
+    transition: transform ease-in-out 0.2s;
+}
